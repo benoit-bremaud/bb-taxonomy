@@ -19,16 +19,24 @@ lint:
 registry base="origin/main":
     #!/bin/sh
     set -eu
-    if ! git rev-parse --verify --quiet {{quote(base + "^{commit}")}} > /dev/null; then
-      echo "registry: base {{base}} is not a commit (no remote yet? run: just check main)" >&2
+    base={{quote(base)}}
+    if ! git rev-parse --verify --quiet "$base^{commit}" > /dev/null; then
+      # The first push of the repository: origin exists but has no main yet, so nothing to compare
+      if [ "$base" = origin/main ] && git remote get-url origin > /dev/null 2>&1 \
+        && ! git ls-remote --exit-code --heads origin main > /dev/null; then
+        echo "registry: WARNING base check not run, origin has no main yet"
+        python3 scripts/check_registry.py
+        exit 0
+      fi
+      echo "registry: base $base is not a commit (no remote yet? run: just check main)" >&2
       exit 1
     fi
     old=$(mktemp)
     trap 'rm -f "$old"' EXIT
-    if git show {{quote(base + ":registry.yaml")}} > "$old" 2> /dev/null; then
+    if git show "$base:registry.yaml" > "$old" 2> /dev/null; then
       python3 scripts/check_registry.py --base "$old"
     else
-      echo "registry: WARNING base check not run, no registry.yaml on {{base}}"
+      echo "registry: WARNING base check not run, no registry.yaml on $base"
       python3 scripts/check_registry.py
     fi
 

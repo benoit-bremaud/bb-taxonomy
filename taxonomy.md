@@ -79,7 +79,7 @@ metadata:
 
 - **No empty structure.** A slot exists only as a registry line. The folder or note is created when its first item arrives.
 - **Review every quarter.** Check the `NN.00` buckets that need a split, the deprecated IDs and the open facet values.
-- **Enforced checks.** `scripts/check_registry.py` checks ID formats, parents, uniqueness, statuses, replacements and facet vocabularies. Given the base branch's registry, it also refuses a removed ID.
+- **Enforced checks.** `scripts/check_registry.py` checks ID formats, parents, uniqueness, statuses, replacements and facet vocabularies. Given the base branch's registry, it also refuses a removed ID, a changed slug (except a reserved slot taken into use), an ID put back to reserved and a revived deprecated ID.
 
 ## Sources
 

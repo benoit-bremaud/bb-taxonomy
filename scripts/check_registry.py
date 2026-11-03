@@ -67,6 +67,8 @@ def check_registry(data):
     """Return the list of problems in a parsed registry."""
     problems = []
     entries = data.get("entries") or []
+    if not isinstance(entries, list) or not all(isinstance(e, dict) for e in entries):
+        return ["registry: entries must be a list of mappings"]
     version = semver(data.get("version"))
     if version is None:
         problems.append("registry: version must be MAJOR.MINOR.PATCH")
@@ -95,6 +97,8 @@ def check_base(data, base):
         new = current.get(eid)
         if new is None:
             problems.append(f"entry {eid}: removed (IDs are never removed, deprecate it)")
+        elif new.get("status") == "reserved" and old.get("status") != "reserved":
+            problems.append(f"entry {eid}: an ID is never put back to reserved")
         elif old.get("status") == "reserved":
             continue  # a reserved slot has no meaning yet: taking it into use may set every field
         elif new.get("slug") != old.get("slug"):

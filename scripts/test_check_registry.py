@@ -37,6 +37,11 @@ class RegistryTest(unittest.TestCase):
     def test_empty_registry(self):
         self.assertIn("registry: no entries", cr.check_registry({"version": "0.1.0"}))
 
+    def test_entries_must_be_a_list_of_mappings(self):
+        expected = ["registry: entries must be a list of mappings"]
+        self.assertEqual(cr.check_registry({"version": "0.1.0", "entries": {"a": 1}}), expected)
+        self.assertEqual(cr.check_registry({"version": "0.1.0", "entries": ["a"]}), expected)
+
     def test_duplicate_id(self):
         self.assert_problem(registry(entry("11", "other")), "duplicate id")
 
@@ -116,6 +121,11 @@ class BaseTest(unittest.TestCase):
         old = registry(entry("11.01", "x", status="deprecated", replaced_by="11"))
         self.assertEqual(cr.check_base(registry(entry("11.01", "x")), old),
                          ["entry 11.01: a deprecated ID is never revived"])
+
+    def test_put_back_to_reserved(self):
+        problems = cr.check_base(registry(entry("11.01", "x", status="reserved")),
+                                 registry(entry("11.01", "x")))
+        self.assertEqual(problems, ["entry 11.01: an ID is never put back to reserved"])
 
     def test_reserved_slot_taken_into_use(self):
         old = registry(entry("90", "reserved", status="reserved"))
