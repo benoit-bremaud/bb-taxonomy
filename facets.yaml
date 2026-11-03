@@ -1,0 +1,32 @@
+# Controlled vocabularies of the facets a classified item carries next to its taxonomy ID.
+# Rules: taxonomy.md § Facets. Checked by scripts/check_registry.py. `open: true` means the listed
+# values are the known ones and new values may be added in a MINOR release.
+version: 0.1.0
+facets:
+  kind:
+    description: What the item is.
+    values: [skill, agent, command, hook, rule, plugin, mcp, note, project]
+  role:
+    description: What the item does for its reader.
+    values: [procedure, doctrine, reference, template, reviewer, generator, runbook, index]
+  phase:
+    description: The lifecycle step where the item is used.
+    values: [discover, specify, design, build, test, review, release, operate, secure, learn, communicate]
+  stack:
+    description: The technology the item is tied to; `any` when it is generic.
+    open: true
+    values: [any, ts, react, expo, node, python, c-cpp, esp-idf, platformio, unreal, docker, gh-actions, cloudflare]
+  scope:
+    description: Where the item applies.
+    values: [global, project, work, school]
+  status:
+    description: The lifecycle of the item itself (not of its taxonomy ID).
+    values: [active, planned, idea, deprecated]
+  source:
+    description: Who owns the item.
+    values: [own, third-party, plugin]
+  quality:
+    description: Optional ISO/IEC 25010:2023 characteristic the item mainly serves.
+    values:
+      [functional-suitability, performance-efficiency, compatibility, interaction-capability,
+       reliability, security, maintainability, flexibility, safety]
