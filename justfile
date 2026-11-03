@@ -20,7 +20,7 @@ registry base="origin/main":
     #!/bin/sh
     set -eu
     if ! git rev-parse --verify --quiet {{quote(base + "^{commit}")}} > /dev/null; then
-      echo "registry: base {{base}} is not a commit (no remote yet? run `just check main`)" >&2
+      echo "registry: base {{base}} is not a commit (no remote yet? run: just check main)" >&2
       exit 1
     fi
     old=$(mktemp)
