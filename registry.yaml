@@ -1,0 +1,143 @@
+# The single source of every taxonomy ID. Rules: taxonomy.md. Checked by scripts/check_registry.py.
+# IDs are never renumbered, reused or removed: retire one with status `deprecated` and `replaced_by`.
+version: 0.1.0
+entries:
+  # 00–09 Meta — agent tooling and personal method
+  - {id: "00", slug: meta, label: Meta, status: active, since: 0.1.0}
+  - {id: "01", slug: agent-configuration, label: Agent configuration, status: active, since: 0.1.0}
+  - {id: "01.01", slug: rules-instructions, label: Rules and instructions, status: active, since: 0.1.0}
+  - {id: "01.02", slug: skill-authoring, label: Skill authoring, status: active, since: 0.1.0}
+  - {id: "01.03", slug: hooks-guards, label: Hooks and guards, status: active, since: 0.1.0}
+  - {id: "01.04", slug: scaffolding-deployment, label: Scaffolding and deployment, status: active, since: 0.1.0}
+  - {id: "01.05", slug: discovery-marketplace, label: Discovery and marketplace, status: active, since: 0.1.0}
+  - {id: "01.06", slug: orchestration-routing, label: Orchestration and model routing, status: active, since: 0.1.0}
+  - {id: "01.07", slug: agent-security, label: Agent security, status: active, since: 0.1.0}
+  - {id: "02", slug: decision-making, label: Decision making, status: active, since: 0.1.0}
+  - {id: "03", slug: knowledge-management, label: Knowledge management, status: active, since: 0.1.0}
+
+  # 10–19 Software engineering
+  - {id: "10", slug: software-engineering, label: Software engineering, status: active, since: 0.1.0}
+  - {id: "11", slug: product-requirements, label: Product and requirements, status: active, since: 0.1.0}
+  - {id: "11.01", slug: user-stories, label: User stories, status: active, since: 0.1.0}
+  - {id: "11.02", slug: specifications, label: Specifications, status: active, since: 0.1.0}
+  - {id: "11.03", slug: product-discovery, label: Discovery and customer research, status: active, since: 0.1.0}
+  - {id: "11.04", slug: prioritisation-roadmap, label: Prioritisation and roadmap, status: active, since: 0.1.0}
+  - {id: "12", slug: architecture-design, label: Architecture and design, status: active, since: 0.1.0}
+  - {id: "12.01", slug: architecture-principles, label: Architecture principles, status: active, since: 0.1.0}
+  - {id: "12.02", slug: design-patterns-oop, label: Design patterns and OOP, status: active, since: 0.1.0}
+  - {id: "12.03", slug: decision-records, label: Decision records, status: active, since: 0.1.0}
+  - {id: "12.04", slug: api-design, label: API design, status: active, since: 0.1.0}
+  - {id: "12.05", slug: data-modelling, label: Data modelling, status: active, since: 0.1.0}
+  - {id: "13", slug: conception-modelling, label: Conception and modelling, status: active, since: 0.1.0}
+  - {id: "13.01", slug: uml, label: UML diagrams, status: active, since: 0.1.0}
+  - {id: "13.02", slug: conception-dossier, label: Conception dossier, status: active, since: 0.1.0}
+  - {id: "13.03", slug: conception-naming, label: Conception naming, status: active, since: 0.1.0}
+  - {id: "14", slug: construction, label: Construction, status: active, since: 0.1.0}
+  - {id: "14.01", slug: languages, label: Programming languages, status: active, since: 0.1.0}
+  - {id: "14.02", slug: web-frontend, label: Web front end, status: active, since: 0.1.0}
+  - {id: "14.03", slug: mobile, label: Mobile, status: active, since: 0.1.0}
+  - {id: "14.04", slug: backend-services, label: Back end and services, status: active, since: 0.1.0}
+  - {id: "14.05", slug: persistence, label: Persistence, status: active, since: 0.1.0}
+  - {id: "14.06", slug: internationalisation, label: Internationalisation, status: active, since: 0.1.0}
+  - {id: "14.07", slug: debugging, label: Debugging, status: active, since: 0.1.0}
+  - {id: "14.08", slug: refactoring, label: Refactoring, status: active, since: 0.1.0}
+  - {id: "14.09", slug: library-docs, label: Library documentation, status: active, since: 0.1.0}
+  - {id: "15", slug: data-ai, label: Data and AI, status: active, since: 0.1.0}
+  - {id: "15.01", slug: data-science, label: Data science and competitions, status: active, since: 0.1.0}
+  - {id: "15.02", slug: ml-llm-engineering, label: ML and LLM engineering, status: active, since: 0.1.0}
+  - {id: "15.03", slug: data-pipelines, label: Data pipelines, status: active, since: 0.1.0}
+  - {id: "16", slug: quality-testing, label: Quality and testing, status: active, since: 0.1.0}
+  - {id: "16.01", slug: test-strategy, label: Test strategy, status: active, since: 0.1.0}
+  - {id: "16.02", slug: test-design, label: Test design and planning, status: active, since: 0.1.0}
+  - {id: "16.03", slug: test-writing, label: Test writing, status: active, since: 0.1.0}
+  - {id: "16.04", slug: test-families, label: Test families, status: active, since: 0.1.0}
+  - {id: "16.05", slug: runtime-qa, label: Runtime QA, status: active, since: 0.1.0}
+  - {id: "16.06", slug: code-review, label: Code review, status: active, since: 0.1.0}
+  - {id: "16.07", slug: web-performance, label: Web performance, status: active, since: 0.1.0}
+  - {id: "17", slug: documentation, label: Documentation, status: active, since: 0.1.0}
+  - {id: "17.01", slug: code-documentation, label: Code documentation, status: active, since: 0.1.0}
+  - {id: "17.02", slug: technical-writing, label: Technical writing, status: active, since: 0.1.0}
+  - {id: "17.03", slug: file-naming, label: File and folder naming, status: active, since: 0.1.0}
+
+  # 20–29 Delivery and operations
+  - {id: "20", slug: delivery-operations, label: Delivery and operations, status: active, since: 0.1.0}
+  - {id: "21", slug: collaboration-vcs, label: Collaboration and version control, status: active, since: 0.1.0}
+  - {id: "21.01", slug: commits-branches, label: Commits and branches, status: active, since: 0.1.0}
+  - {id: "21.02", slug: issues-planning, label: Issues and planning, status: active, since: 0.1.0}
+  - {id: "21.03", slug: pull-requests, label: Pull requests, status: active, since: 0.1.0}
+  - {id: "21.04", slug: repo-maintenance, label: Repository maintenance, status: active, since: 0.1.0}
+  - {id: "21.05", slug: open-source, label: Open source, status: active, since: 0.1.0}
+  - {id: "22", slug: ci-cd, label: CI/CD, status: active, since: 0.1.0}
+  - {id: "22.01", slug: local-ci, label: Local CI, status: active, since: 0.1.0}
+  - {id: "22.02", slug: hosted-pipelines, label: Hosted pipelines, status: active, since: 0.1.0}
+  - {id: "23", slug: release-versioning, label: Release and versioning, status: active, since: 0.1.0}
+  - {id: "24", slug: infrastructure, label: Infrastructure, status: active, since: 0.1.0}
+  - {id: "24.01", slug: environments, label: Environments, status: active, since: 0.1.0}
+  - {id: "24.02", slug: containers, label: Containers, status: active, since: 0.1.0}
+  - {id: "24.03", slug: cloud-edge, label: Cloud and edge, status: active, since: 0.1.0}
+  - {id: "24.04", slug: accounts-credentials, label: Accounts and credentials, status: active, since: 0.1.0}
+  - {id: "24.05", slug: homelab, label: Homelab and self-hosting, status: active, since: 0.1.0}
+  - {id: "25", slug: reliability-observability, label: Reliability and observability, status: active, since: 0.1.0}
+  - {id: "25.01", slug: observability, label: Observability, status: active, since: 0.1.0}
+  - {id: "25.02", slug: backup-restore, label: Backup and restore, status: active, since: 0.1.0}
+  - {id: "25.03", slug: incident-response, label: Incident response, status: active, since: 0.1.0}
+
+  # 30–39 Security
+  - {id: "30", slug: security, label: Security, status: active, since: 0.1.0}
+  - {id: "31", slug: secure-development, label: Secure development, status: active, since: 0.1.0}
+  - {id: "31.01", slug: security-policy, label: Security policy, status: active, since: 0.1.0}
+  - {id: "31.02", slug: threat-modelling, label: Threat modelling, status: active, since: 0.1.0}
+  - {id: "31.03", slug: sast-supply-chain, label: SAST and supply chain, status: active, since: 0.1.0}
+  - {id: "31.04", slug: secrets, label: Secrets, status: active, since: 0.1.0}
+  - {id: "32", slug: offensive-security, label: Offensive security, status: active, since: 0.1.0}
+  - {id: "32.01", slug: pentest-campaign, label: Pentest campaign, status: active, since: 0.1.0}
+  - {id: "32.02", slug: offensive-tooling, label: Offensive tooling, status: active, since: 0.1.0}
+  - {id: "32.03", slug: certification-practice, label: Certification and practice, status: active, since: 0.1.0}
+  - {id: "33", slug: forensics-reverse, label: Forensics and reverse engineering, status: active, since: 0.1.0}
+  - {id: "34", slug: privacy-compliance, label: Privacy and compliance, status: active, since: 0.1.0}
+
+  # 40–49 Design and experience
+  - {id: "40", slug: design-experience, label: Design and experience, status: active, since: 0.1.0}
+  - {id: "41", slug: ui, label: User interface, status: active, since: 0.1.0}
+  - {id: "41.01", slug: visual-design, label: Visual design, status: active, since: 0.1.0}
+  - {id: "41.02", slug: motion, label: Motion, status: active, since: 0.1.0}
+  - {id: "41.03", slug: styles-design-systems, label: Styles and design systems, status: active, since: 0.1.0}
+  - {id: "41.04", slug: ui-review, label: UI review, status: active, since: 0.1.0}
+  - {id: "42", slug: ux, label: User experience, status: active, since: 0.1.0}
+  - {id: "43", slug: accessibility, label: Accessibility, status: active, since: 0.1.0}
+
+  # 50–59 Hardware and embedded
+  - {id: "50", slug: hardware-embedded, label: Hardware and embedded, status: active, since: 0.1.0}
+  - {id: "51", slug: embedded-firmware, label: Embedded firmware, status: active, since: 0.1.0}
+  - {id: "52", slug: electronics-components, label: Electronics and components, status: active, since: 0.1.0}
+  - {id: "53", slug: iot-protocols, label: IoT and protocols, status: active, since: 0.1.0}
+  - {id: "54", slug: energy-ev-charging, label: Energy and EV charging, status: active, since: 0.1.0}
+
+  # 60–69 Creative and games
+  - {id: "60", slug: creative-games, label: Creative and games, status: active, since: 0.1.0}
+  - {id: "61", slug: game-development, label: Game development, status: active, since: 0.1.0}
+  - {id: "62", slug: graphics-3d, label: Graphics and 3D, status: active, since: 0.1.0}
+  - {id: "63", slug: media-performing-arts, label: Media and performing arts, status: active, since: 0.1.0}
+
+  # 70–79 Communication and growth
+  - {id: "70", slug: communication-growth, label: Communication and growth, status: active, since: 0.1.0}
+  - {id: "71", slug: social-media, label: Social media and personal brand, status: active, since: 0.1.0}
+  - {id: "71.01", slug: linkedin, label: LinkedIn, status: active, since: 0.1.0}
+  - {id: "71.02", slug: multi-platform, label: Multi-platform publishing, status: active, since: 0.1.0}
+  - {id: "71.03", slug: editorial-strategy, label: Editorial strategy, status: active, since: 0.1.0}
+  - {id: "71.04", slug: community-analytics, label: Community and analytics, status: active, since: 0.1.0}
+  - {id: "72", slug: marketing-web-presence, label: Marketing and web presence, status: active, since: 0.1.0}
+  - {id: "72.01", slug: copywriting, label: Copywriting, status: active, since: 0.1.0}
+  - {id: "72.02", slug: seo-geo, label: SEO and GEO, status: active, since: 0.1.0}
+  - {id: "72.03", slug: site-audit, label: Site audit, status: active, since: 0.1.0}
+
+  # 80–89 Knowledge and productivity
+  - {id: "80", slug: knowledge-productivity, label: Knowledge and productivity, status: active, since: 0.1.0}
+  - {id: "81", slug: meetings-voice, label: Meetings and voice, status: active, since: 0.1.0}
+  - {id: "82", slug: learning-school, label: Learning and school, status: active, since: 0.1.0}
+  - {id: "83", slug: research, label: Research, status: active, since: 0.1.0}
+  - {id: "84", slug: automation, label: Automation, status: active, since: 0.1.0}
+  - {id: "85", slug: project-management-tools, label: Project management tools, status: active, since: 0.1.0}
+
+  # 90–99 Reserved for future areas (business and freelance, finance tooling, life admin)
+  - {id: "90", slug: reserved, label: Reserved, status: reserved, since: 0.1.0}
